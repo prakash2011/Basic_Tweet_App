@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+
+
+{% block title %} Login{% endblock %}
+
+{% block content %}
+   <div class="contianer" style="margin-left: 390px;margin-top: 150px ;">
+    <form method="post">
+        <h2> Login Form</h2>
+        {% csrf_token%}
+        {{form.as_p}}
+        <button class="btn btn-success" style="margin-left:280px ;margin-right: 4px; margin-top: 10px;">Submit</button>
+        
+
+    </form>
+    <p>Don't have account <a href="{% url 'register' %}"> Register here</a> </p>
+</div>
+{% endblock %}
